@@ -52,15 +52,17 @@ class _IndexPageState extends State<IndexPage> {
     return Scaffold(
       backgroundColor: Color.fromRGBO(244, 245, 245, 1.0),
       bottomNavigationBar: BottomNavigationBar(
-          type: BottomNavigationBarType.fixed,
-          currentIndex: currentIndex,
-          items: bottomTabs,
-          onTap: (index) {
-            setState(() {
-              currentIndex = index;
-              currentPage = tabBodies[currentIndex];
-            });
-          }),
+        type: BottomNavigationBarType.fixed,
+        currentIndex: currentIndex,
+        items: bottomTabs,
+        onTap: (index) {
+          setState(() {
+            currentIndex = index;
+            currentPage = tabBodies[currentIndex];
+          });
+        },
+      ),
+      body: currentPage,
     );
   }
 }
