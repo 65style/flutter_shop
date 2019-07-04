@@ -6,9 +6,10 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     getHttp();
     return Scaffold(
-        body: Center(
-      child: Text('商城首页d'),
-    ));
+      body: Center(
+        child: Text('商城首页d'),
+      ),
+    );
   }
 
   void getHttp() async {
